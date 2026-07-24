@@ -36,3 +36,27 @@ up front, before the founder invests effort.
 
 ### Files
 - `index-v2.html` — the iteration. `index.html` (v1) is unchanged, kept for comparison.
+
+## v2.1 — 2026-07-24
+
+**What changed:** Extended the same cost + time treatment to paso 9 (sector permits)
+and paso 10 (growth services) — previously bare links with no cost/time shown.
+
+### Cost + time added
+
+| Step | Service | Cost | Time | Source (observicios.gob.do id) |
+|------|---------|------|------|---------------------------------|
+| 9 | Licencia — Establecimiento de hospedaje | RD$5,000–30,000 | 45 días lab. | 4855 |
+| 9 | Licencia — Expendio de alimentos y bebidas | RD$2,000–10,000 (discotecas RD$20,000) | 45 días lab. | 4850 |
+| 9 | Licencia — Giftshop | RD$1,000–8,000 | 10–20 min ⚠ | 4875 |
+| 9 | Licencia — Centro de masajes (Spa) | RD$25,000 | 45 días lab. | 4897 |
+| 10 | Préstamos Mipymes (PROMIPYME) | Gratis (solicitud) | 3–5 días lab. | 5842 |
+| 10 | Certificaciones CONFOTUR | Gratis | 5 días lab. | 4802 |
+
+### Notes / caveats
+- Figures pulled from `gob.do-scraping/docs/exports/observicios-service-detail.csv`
+  (`cost` / `response_time` columns), same repo that sourced the paso 1–8 figures.
+  Flagged `Verify with data` in the assumptions panel, same as the formation steps.
+- ⚠ The giftshop record's time (10–20 minutos) is inconsistent with its three sibling
+  MITUR licences, all 45 días laborables — likely a data-entry error in the source
+  export. Flagged explicitly in the assumptions panel; needs confirming with MITUR.
