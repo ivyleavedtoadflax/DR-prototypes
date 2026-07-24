@@ -1,9 +1,22 @@
 # Empezar un negocio — drimstack build
 
-Three candidate prototypes of the gob.do "Empezar un negocio" (start a business)
-journey, produced by `/drimstack:build`. They exist to be **tested against each
-other**, not to be the answer. The output of a build is the starting point for an
-alpha; the alpha is what the team learns from testing.
+Prototypes 1–3 are **candidate hypotheses** of the gob.do "Empezar un negocio"
+(start a business) journey, produced by `/drimstack:build`. They exist to be
+**tested against each other**, not to be the answer. The output of a build is the
+starting point for an alpha; the alpha is what the team learns from testing.
+
+**Prototype 4 · Solicitud guiada** is different in kind: it is the
+**research-driven end-to-end redesign** produced *after* a 6-persona UX study of
+the *live* Ventanilla Única de Formalización (`gob-do-portal-dev.www.gob.do`). It is
+not a fourth competing bet — it is the consolidated flow that acts on the study's
+14 prioritised recommendations (`DR-gob.do-momentos-de-vida/docs/ur-ventanilla-formalizacion/report.md`).
+It embodies, one page at a time: honest cost/tax **before** the form (not a false
+"GRATIS"), a company-type helper that recommends and does *not* default to SRL,
+fully labelled/`aria-required` controls with a native `<dialog>` for the terms,
+a real step-by-step wizard replacing the ~40-field mega-form, offline documents
+surfaced up front, a reworded ONAPI-name question, and a passport/non-resident path
+that actually completes (the live one dead-ends at the applicant's own name).
+See its assumptions panel for how each move maps to a recommendation.
 
 - **Owner (assumed):** OGTIC (cross-government front door on gob.do), coordinating
   MICM/VUF, ONAPI, DGII, TSS and the sector regulators.
