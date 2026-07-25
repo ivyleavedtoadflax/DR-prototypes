@@ -1,0 +1,38 @@
+name: Deploy site & PR previews
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+# ponytail: per-ref key only — a merge fires both the main deploy and the
+# PR-preview cleanup, which aren't serialized against each other. Both write
+# gh-pages. Switch to a shared key if they ever actually collide.
+concurrency: deploy-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # ponytail: static HTML prototypes, no build step. If a build is ever added,
+      # build into ./public and point the deploy steps at it.
+
+      - name: Deploy live site (main only)
+        if: github.event_name == 'push'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          clean-exclude: pr-preview/   # don't wipe open PR previews
+
+      - name: Deploy PR preview
+        if: github.event_name == 'pull_request'
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .
