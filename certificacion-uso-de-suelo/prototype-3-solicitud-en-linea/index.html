@@ -235,7 +235,7 @@
     <form id="gobid-form" novalidate onsubmit="return validateGobid(event);">
       <div class="gobdo-form-group">
         <label class="gobdo-label" for="input-cedula-rnc">Cédula o RNC</label>
-        <span class="gobdo-hint" id="input-cedula-rnc-hint">Escriba su cédula (001-1234567-8) o el RNC de su empresa (9 dígitos).</span>
+        <span class="gobdo-hint" id="input-cedula-rnc-hint">Escriba su cédula (000-0000000-0) o el RNC de su empresa (9 dígitos).</span>
         <input class="gobdo-input" type="text" id="input-cedula-rnc" name="cedula-rnc" inputmode="numeric" autocomplete="off" aria-describedby="input-cedula-rnc-hint">
         <span class="gobdo-error-message" id="input-cedula-rnc-error" hidden></span>
       </div>
@@ -246,7 +246,7 @@
 
     <div id="gobid-result" class="gobdo-card" hidden>
       <h2 id="gobid-result-heading" tabindex="-1">Encontramos sus datos</h2>
-      <p><strong>María Altagracia Pérez Santos</strong> <span class="fake">dato de prueba</span></p>
+      <p><strong>Mengana Ejemplo Santos</strong> <span class="fake">dato de prueba</span></p>
       <p>Cédula o RNC: <span id="gobid-result-id"></span></p>
       <p>¿Es usted?</p>
       <p>
@@ -391,7 +391,7 @@
     <dl>
       <div class="gobdo-summary-row">
         <dt>Identidad</dt>
-        <dd>María Altagracia Pérez Santos <span class="fake">dato de prueba</span></dd>
+        <dd>Mengana Ejemplo Santos <span class="fake">dato de prueba</span></dd>
         <dd class="gobdo-summary-action"><a href="#" onclick="showPage('page-gobid'); return false;">Cambiar<span class="gobdo-visually-hidden"> identidad</span></a></dd>
       </div>
       <div class="gobdo-summary-row">
@@ -642,7 +642,7 @@
     if (!value) {
       errors.push({ id: 'input-cedula-rnc', message: 'Escriba su cédula o el RNC de su empresa.' });
     } else if (!cedulaPattern.test(value) && !rncPattern.test(value)) {
-      errors.push({ id: 'input-cedula-rnc', message: 'Use el formato 001-1234567-8 para su cédula, o 9 dígitos para el RNC.' });
+      errors.push({ id: 'input-cedula-rnc', message: 'Use el formato 000-0000000-0 para su cédula, o 9 dígitos para el RNC.' });
     }
     if (errors.length) { showErrors('gobid', errors); return false; }
 

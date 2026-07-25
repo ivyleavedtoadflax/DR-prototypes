@@ -346,7 +346,7 @@ dialog.gobdo-dialog::backdrop { background: rgba(0,0,0,0.55); }
   <div id="doc-cedula-fields" class="gobdo-form-group" hidden>
     <label class="gobdo-label" for="ced-num">Número de cédula <span class="gobdo-req" aria-hidden="true">(requerido)</span></label>
     <span class="gobdo-hint">Con o sin guiones. Buscamos su nombre en GobID para que no tenga que escribirlo.</span>
-    <input class="gobdo-input gobdo-input--short" id="ced-num" type="text" aria-required="true" autocomplete="off" value="001-1234567-8">
+    <input class="gobdo-input gobdo-input--short" id="ced-num" type="text" aria-required="true" autocomplete="off" value="000-0000000-0">
   </div>
   <div id="doc-pasaporte-fields" hidden>
     <div class="gobdo-form-group">
@@ -373,9 +373,9 @@ dialog.gobdo-dialog::backdrop { background: rgba(0,0,0,0.55); }
   <div id="confirm-cedula" hidden>
     <p>Encontramos este registro en GobID. Compruebe que sea usted.</p>
     <div class="gobdo-id-card">
-      <h3><span class="fake-data">Ana Lucía Reyes Batista</span> <span class="gobdo-tag">datos ficticios</span></h3>
+      <h3><span class="fake-data">Fulana Ejemplo Pérez</span> <span class="gobdo-tag">datos ficticios</span></h3>
       <dl>
-        <dt>Cédula</dt><dd class="fake-data">001-1234567-8</dd>
+        <dt>Cédula</dt><dd class="fake-data">000-0000000-0</dd>
         <dt>Provincia</dt><dd class="fake-data">Santo Domingo</dd>
         <dt>Sexo</dt><dd class="fake-data">Femenino</dd>
       </dl>
@@ -1064,7 +1064,7 @@ function submitIdentity() {
     document.getElementById('confirm-pasaporte').hidden = false;
     document.getElementById('datos-prefill-note').hidden = true;
   } else {
-    app.solicitante = 'Ana Lucía Reyes Batista (ficticio, GobID)';
+    app.solicitante = 'Fulana Ejemplo Pérez (ficticio, GobID)';
     document.getElementById('confirm-cedula').hidden = false;
     document.getElementById('confirm-pasaporte').hidden = true;
     document.getElementById('datos-prefill-note').hidden = false;
