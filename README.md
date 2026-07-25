@@ -32,3 +32,10 @@ Construction-permit content for the **Ayuntamiento del Distrito Nacional**
 
 Every prototype carries an inline "alfa" banner and an assumptions panel — they
 are prototypes for testing, not real services.
+
+## Reviewing changes
+
+Open a pull request and a bot comments a link to a live preview of that branch
+at `…github.io/DR-prototypes/pr-preview/pr-N/`. Click it to see the prototypes
+rendered before merging; it updates on every push and is deleted when the PR
+closes. Merging to `main` republishes the live site.
